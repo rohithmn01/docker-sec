@@ -2,6 +2,10 @@ version: "3.9"
 
 services:
   flask-app:
-    build: .
+    build:
+      context: .
+      args:
+        - USER_ID=1000
+    image: docker.io/rohithmn01/docker_sec_flask:latest
     ports:
       - 7000:5500
